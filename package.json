@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/magnumthetyrant1/portfolio/issues"
   },
-  "homepage": "https://github.com/magnumthetyrant1/portfolio#readme"
+  "homepage": "https://github.com/magnumthetyrant1/portfolio#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
