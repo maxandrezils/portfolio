@@ -1,9 +1,11 @@
 // app/app.ts
-import express from "express";
-import path from "path";
+import dotenv from 'dotenv'
+import express from 'express';
+import path from 'path';
 
+dotenv.config();
 const app = express();
-const port = 8080;
+const port = 7080;
 
 // Configure Express to use ejs
 app.set( "views", path.join(__dirname, "../src/views") );
