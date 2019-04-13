@@ -11,7 +11,7 @@
     "build": "npm-run-all clean lint tsc copy-assets",
     "dev:start": "npm-run-all build start",
     "dev": "nodemon --watch src -e ts,ejs --exec npm run dev:start",
-    "start": "nodemon build/app.js"
+    "start": "nodemon build/app/app.js"
   },
   "repository": {
     "type": "git",
