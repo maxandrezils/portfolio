@@ -11,7 +11,6 @@
     "build": "npm-run-all clean lint tsc copy-assets",
     "dev:start": "npm-run-all build start",
     "dev": "nodemon --watch src -e ts,ejs --exec npm run dev:start",
-    "clean": "rm dist/bundle.js",
     "start": "parcel src/index.html",
     "build-prod": "parcel build src/index.html"
   },
@@ -34,7 +33,7 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
     "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",  
+    "@babel/preset-env": "^7.4.3",
     "@types/dotenv": "^6.1.1",
     "@types/express": "^4.16.1",
     "@types/fs-extra": "^5.0.5",
