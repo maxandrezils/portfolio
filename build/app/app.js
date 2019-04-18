@@ -4,8 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 // app/app.ts
+var dotenv_1 = __importDefault(require("dotenv"));
 var express_1 = __importDefault(require("express"));
 var path_1 = __importDefault(require("path"));
+dotenv_1.default.config();
 var app = express_1.default();
 var port = 7080;
 // Configure Express to use ejs
@@ -14,7 +16,13 @@ app.set("view engine", "ejs");
 app.get("/", function (req, res) {
     res.render("index");
 });
-app.listen(port, function () {
-    // tslint:disable-next-line:no-console
-    console.log("Example app listening on " + port);
+// @ts-ignore
+app.listen(port, function (err) {
+    if (err) {
+        console.error(err);
+    }
+    else {
+        // tslint:disable-next-line:no-console
+        console.log("Example app listening on " + port);
+    }
 });
